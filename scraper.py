@@ -3,9 +3,9 @@ from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty
 import csv
  
-api_id = 2756547
-api_hash = 'fa603169f47993e1eea5da652a6106a7'
-phone = '+1 (602) 800-7291'
+api_id = 3399440
+api_hash = '67960092144fb6ace500bc1337afe268'
+phone = '+1 (332) 255-1348'
 client = TelegramClient(phone, api_id, api_hash)
  
 client.connect()
@@ -41,7 +41,7 @@ for g in groups:
     print(str(i) + '- ' + g.title)
     i+=1
  
-g_index = input("Number Enter kar: ")
+g_index = input("Enter Your Group number : ")
 target_group=groups[int(g_index)]
  
 print('Fetching Members...')
@@ -67,4 +67,4 @@ with open("member.csv","w",encoding='UTF-8') as f:
             last_name= ""
         name= (first_name + ' ' + last_name).strip()
         writer.writerow([username,user.id,user.access_hash,name,target_group.title, target_group.id])      
-print('Gandu Members scrape ho gaye hai. By @Wrong_User_Name')
+print('Ok Bhai Members scrape ho gaye hai. By @Pista123')
